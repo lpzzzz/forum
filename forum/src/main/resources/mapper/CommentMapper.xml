@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cn.com.cqucc.forum.dao.CommentMapper">
+
+    <sql id="selectFields">
+        id,user_id,entity_type,entity_id,target_id,content,status,create_time
+    </sql>
+
+    <sql id="insertFields">
+        user_id,entity_type,entity_id,target_id,content,status,create_time
+    </sql>
+
+    <!--根据评论的类型查询评论 根据创建时间升序排列-->
+    <select id="selectCommentByEntity" resultType="Comment">
+        select
+        <include refid="selectFields"></include>
+        from comment
+        where status = 0
+        and entity_id = #{entityId}
+        and entity_type = #{entityType}
+        order by create_time asc
+        limit #{offset} , #{limit}
+    </select>
+
+    <select id="selectCommentCountByEntity" resultType="int">
+        select count(id)
+        FROM comment
+        where status = 0
+        and entity_id = #{entityId}
+        and entity_type = #{entityType}
+    </select>
+
+    <!--keyProperty="id" 设置主键自增-->
+    <insert id="insertCommentByEntity" parameterType="Comment" keyProperty="id">
+        insert into comment (<include refid="insertFields"></include>)
+        value (#{userId},#{entityType},#{entityId},#{targetId},#{content},#{status},#{createTime})
+    </insert>
+
+    <select id="selectCommentById" resultType="Comment">
+        select
+        <include refid="selectFields"></include>
+        from comment
+        where id = #{id}
+    </select>
+
+    <select id="selectCommentByEntityTypeAndUserId" resultType="Comment">
+        select
+        <include refid="selectFields"></include>
+        from comment
+        where entity_type = #{entityType} and user_id = #{userId}
+        order by create_time desc
+        limit #{offset} , #{limit}
+    </select>
+
+    <!--查询某个用户回复帖子的数量-->
+    <select id="selectCommentCountByEntityTypeAndUserId" resultType="int">
+        select
+        count(id)
+        from comment
+        where entity_type = #{entityType} and user_id = #{userId}
+    </select>
+</mapper>

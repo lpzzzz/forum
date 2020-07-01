@@ -1,0 +1,9 @@
+2020-05-21 00:01:51,819 INFO [forumScheduler_Worker-5] c.c.c.c.f.q.PostScoreRefreshJob [PostScoreRefreshJob.java:55] [任务取消] 没有需要刷新的帖子!
+2020-05-21 00:06:51,813 INFO [forumScheduler_Worker-1] c.c.c.c.f.q.PostScoreRefreshJob [PostScoreRefreshJob.java:55] [任务取消] 没有需要刷新的帖子!
+2020-05-21 00:11:51,814 INFO [forumScheduler_Worker-2] c.c.c.c.f.q.PostScoreRefreshJob [PostScoreRefreshJob.java:55] [任务取消] 没有需要刷新的帖子!
+2020-05-21 00:16:51,814 INFO [forumScheduler_Worker-3] c.c.c.c.f.q.PostScoreRefreshJob [PostScoreRefreshJob.java:55] [任务取消] 没有需要刷新的帖子!
+2020-05-21 00:21:51,814 INFO [forumScheduler_Worker-4] c.c.c.c.f.q.PostScoreRefreshJob [PostScoreRefreshJob.java:55] [任务取消] 没有需要刷新的帖子!
+2020-05-21 00:26:51,815 INFO [forumScheduler_Worker-5] c.c.c.c.f.q.PostScoreRefreshJob [PostScoreRefreshJob.java:55] [任务取消] 没有需要刷新的帖子!
+2020-05-21 00:31:51,815 INFO [forumScheduler_Worker-1] c.c.c.c.f.q.PostScoreRefreshJob [PostScoreRefreshJob.java:55] [任务取消] 没有需要刷新的帖子!
+2020-05-21 00:36:51,814 INFO [forumScheduler_Worker-2] c.c.c.c.f.q.PostScoreRefreshJob [PostScoreRefreshJob.java:55] [任务取消] 没有需要刷新的帖子!
+2020-05-21 00:41:51,814 INFO [forumScheduler_Worker-3] c.c.c.c.f.q.PostScoreRefreshJob [PostScoreRefreshJob.java:55] [任务取消] 没有需要刷新的帖子!

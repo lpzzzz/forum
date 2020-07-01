@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+</head>
+<body>
+<p>
+    <input type="button" onclick="send();" value="发送ajax">
+</p>
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script>
+    function send() {
+        // $.post("访问路径",请求参数,回调函数);
+        $.post(
+            "/forum/alpha/ajax",
+            {"code": "0", "msg": "请求成功!"},
+            function (data) {
+                console.log(typeof(data));
+                console.log(data);
+                /*json字符串转换为对象*/
+                data = $.parseJSON(data);
+                console.log(typeof(data));
+                console.log(data.code);
+                console.log(data.msg);
+            }
+        );
+    }
+</script>
+</body>
+</html>
